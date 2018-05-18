@@ -1,0 +1,27 @@
+<html><body>
+<h3>Configuration Page</h3>
+<table border = "1">
+<tr><td>
+<h4>Output Pin Configuration</h4>
+<form>
+State Name: <input type="text" name="firstname" /><br>
+<p>
+Check the pins that will be high to define the state. <br><br>
+
+<input type="checkbox" name="vehicle" value="1" /> 1
+<input type="checkbox" name="vehicle" value="2" /> 2
+<input type="checkbox" name="vehicle" value="3" /> 3
+<input type="checkbox" name="vehicle" value="4" /> 4
+<input type="checkbox" name="vehicle" value="5" /> 5
+<input type="checkbox" name="vehicle" value="6" /> 6
+<input type="checkbox" name="vehicle" value="7" /> 7
+<input type="checkbox" name="vehicle" value="8" /> 8
+<input type="checkbox" name="vehicle" value="9" /> 9
+<input type="checkbox" name="vehicle" value="10" /> 10<br>
+<br>
+
+<input type="submit" value="Save" />
+
+</form> 
+
+

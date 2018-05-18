@@ -1,0 +1,32 @@
+<html><body>
+<h1> Remote Data Aquisition Box</h1><br>
+<h4>Data Display Page</h4>
+<table border=""1""><tr><td>
+<h3>Mode Change Form:</h3><p><form name="input" action="write" method="get"
+<input type="radio" name="mode" value="loader" /> Loader Mode<br />
+<input type="radio" name="mode' value="common" /> Common Mode<br />
+<input type="radio" name="mode" value="normal" /> Normal Mode<br />
+<input type="submit" value="Submit" /></form> 
+<p>Clicking the Submit button will change the mode of the Remote Box.
+</p><td>Current Mode:<br>
+
+// send mode after this line
+
+</td></td></tr><tr><td><h3>Data In:</h3><br>Input Pins:<br>1,2,3,4,5,6,7,8,9,10<br><br>
+Input Data from box:<br>
+
+
+ //send data after this line
+
+</br><td>Remote Box status is:<br>
+
+ // send human status after this line
+
+</td></td></tr></table></body></html>
+
+//added in 1.1
+
+<tr><td>  <h3> IP Change Form</h3><p><form name="input" action="text" method="get"><input type="IP" name="firstSector" size = "1" value="""" >.
+<input type="IP" name="secondSector" size = "1" value=" ">.<input type="IP" name="thirdSector" size = "1" value="">
+.<input type="IP" name="fourthSector" size ="1" value=""><p><i>i.e. 192 . 168 . 0 . 117</i><p><input type="submit" value="Submit" /></form>
+<p>If you click the "Submit" button, the box IP address  will be updated and you <p> will need to type it to your browser's URL box to regain access.</p></td></tr>

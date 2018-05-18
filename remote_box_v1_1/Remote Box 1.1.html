@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Remote Box 1.1</title>
+
+</head><body style="width: 1024px;">
+<h1> Remote Data Aquisition Box</h1>
+<span style="font-weight: bold; font-style: italic;"></span>
+<table 1="" border="1">
+<tbody>
+<tr>
+<td>
+<h3>Mode Change Form:</h3>
+<form method="get" action="write" name="input"><input name="mode" value="loader" type="radio">
+Loader Mode<br>
+<input name="mode' value=" common="" type="radio"> Common Mode<br>
+<input name="mode" value="normal" type="radio">
+Normal Mode<br>
+<br>
+<input value="Submit" type="submit"></form>
+<p>Clicking the Submit button will change the mode of the
+Remote Box.
+</p>
+</td>
+<td>Current Mode:<br>
+// send mode after this line
+</td>
+</tr>
+<tr>
+<td>
+<h3>Data In:</h3>
+Input Pins:<br>
+1,2,3,4,5,6,7,8,9,10<br>
+<br>
+Input Data from box:<br>
+//send data after this line
+</td>
+<td>Remote Box status is:<br>
+// send human status after this line
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr style="width: 100%; height: 2px;"><br>
+//added in 1.1
+<h3>Relay Toggle</h3>
+<form method="get" action="toggle" name="relay"><input name="relay" value="on" type="radio">Relay On<br>
+<input name="relay" value="off" type="radio">Relay
+Off<br>
+<br>
+<input value="Submit" type="submit"></form>
+<hr style="width: 100%; height: 2px;">
+//added in 1.1<br>
+<h3> IP Change Form</h3>
+<form name="input" action="text" method="get"><input maxlength="3" name="firstSector" size="1">.
+<input maxlength="3" name="secondSector" size="1" value=" ">.<input maxlength="3" name="thirdSector" size="1">
+.<input maxlength="3" name="fourthSector" size="1">
+<p><i>i.e. 192 . 168 . 0 . 117</i></p>
+<p><input value="Submit" type="submit"></p>
+</form>
+<p>If you click the "Submit" button, the box IP address will be
+updated and you will need to type it to your browser's URL box to
+regain
+access.</p>
+</body></html>

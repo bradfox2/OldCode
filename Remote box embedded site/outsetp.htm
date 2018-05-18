@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Remote Box - Setup Page</title>
+<link href="Rbcss.css" rel="stylesheet" type="text/css" />
+<title>
+Remote Box - Run Page
+</title>
+<link href="Rbcss.css" rel="stylesheet" type="text/css" />
+<script src="spryasts/svtfjs.js" type="text/javascript"></script>	
+<link href="spryasts/svtf.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+<div id="header">
+	<h1> Remote Box Setup</h1>
+</div>
+<div id="leftnav">	
+<a href="index.htm">Run View</a><br/>
+<a href="outsetp.htm">Output Setup </a><br/>
+<a href="insetup.htm">Input Setup</a><br/>
+<a href="chgip.htm">Change IP</a><br/>
+</div>
+
+<div id="content">
+ <h3> Output Assignment</h3>
+  <form method="post" action="/cgi-bin/">
+    <label for="textfield">Output State: </label>
+    <input name="output_pin_state_define" type="text" size="30" maxlength="30" />
+    <label for="textfield">Definition: </label>
+    <span id="sprytextfield1">
+    <label for="output_pin_state_definition"></label>
+    <input type="text" name = "output_pin_definition" size="16" maxlength="16" />
+    <span class="textfieldRequiredMsg">16 digits of 1s and 0s required.</span><span class="textfieldInvalidFormatMsg">1s and 0s only, 16 digits long.</span><span class="textfieldMinCharsMsg">Must be 16 digits.</span><span class="textfieldMaxCharsMsg">Must be 16 digits.</span></span>
+<input type="submit" value="Submit" />
+  </form>
+  <P><a href="./outsts.txt">Current Ouput Definitions</a></div>
+
+<div id="footer">
+<h3>
+</h3>
+</div>
+</div>
+<script type="text/javascript">
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "integer", {minChars:16, maxChars:16, validateOn:["change"]});
+</script>
+</body>
+</html>

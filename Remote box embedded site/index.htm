@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+setInterval("Refresh()", 5000);
+
+function Refresh(){
+	$(document).ready(function(){
+    $("input_pin_read").load('/inread.txt');
+	$("input_pin_state").load('/instate.txt');
+	$("output_mode").load('/outmode.txt.');
+  });
+};
+
+function PowerControl(){
+	$(document).ready(function(){
+	$.post("/cgi-bin/", {Relay:"on"}, alert("Remote Power On"));
+	});
+}
+</script>
+<title>
+Remote Box - Run Page
+</title>
+<link href="Rbcss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+<div id="header">
+	<h1> Remote Box </h1>
+</div>
+<div id="leftnav">	
+<a href="index.htm">Run View</a><br/>
+<a href="outsetp.htm">Output Setup </a><br/>
+<a href="insetup.htm">Input Setup</a><br/>
+<a href="chgip.htm">Change IP</a><br/>
+</div>
+
+<div id="content">
+  <table width="100%" height="232" border="1">
+    <tr>
+      <td width="30%" height="36"><strong>System Power Control:</strong></td>
+      <td width="29%"><strong>Output Mode:</strong></td>
+      <td width="41%"><strong>Incoming State:</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="4" align="center" valign="middle"> 
+      <form action="/cgi-bin/" method="post" onsubmit="window.location='index.htm'"><input class="button" name = "Relay=on" type="submit" value="Power On Remote System"  onClick="PowerControl()" />	</td>
+      <td height="28">Current Mode:</td>
+      <td rowspan="4"><input_pin_state>Input Pin State</input_pin_state></td>
+    </tr>
+    <tr>
+      <td height="32"><output_mode>#d</output_mode></td>
+      </tr>
+    <tr>
+      <td height="28"><strong>Change Mode:</strong></td>
+      </tr>
+    <tr>
+      <td height="94">#h</td>
+      </tr>
+  </table>
+</div>
+
+<div id="footer">
+<h3>
+</h3>
+</div>
+</div>
+</body>
+</html>
+
